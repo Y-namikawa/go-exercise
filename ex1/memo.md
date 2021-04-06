@@ -29,3 +29,27 @@ func main() {
   fmt.Println("Hello World!")
 }
 ```
+
+# 標準入力
+```
+package main
+
+import (
+  "bufio"
+  "os"
+)
+
+func main() {
+  // 入力用の変数を定義
+  scanner := bufio.NewScanner(os.Stdin)
+  // コマンドラインから入力を受け付ける
+  scanner.Scan()
+  // 入力された文字列を取得する
+  scanner.Text()
+}
+```
+
+＃GOPATH
+- Go言語が参照する場所
+- Goをインストールしたフォルダーないの"src"を示す
+- "src"内に作成したプログラムは他のプログラムでimportできる
